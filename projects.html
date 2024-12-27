@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    body {
+        overflow-x: hidden;
+        background: #222222;
+        line-height: 1.6;
+    }
+    
+    .hero-header {
+        width: 100%;
+        height: auto;
+       
+        min-height: 40vh;
+        background: linear-gradient(to bottom, #1a1a1a, #222);
+        color: #fff;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    .wrapper {
+        width: 1208px;
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    header {
+        padding: 40px 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .logo {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo i {
+        height: 45px;
+        width: 45px;
+        background-color: #007ced;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 124, 237, 0.3);
+    }
+    
+    .logo .logo-text {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Enhanced Navigation Styles */
+    nav .navlinks {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    nav .navlinks li a {
+        color: #e5e5e5;
+        position: relative;
+        padding: 5px 0;
+    }
+    
+    nav .navlinks li a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #007ced;
+        transition: width 0.3s ease;
+    }
+    
+    nav .navlinks li a:hover::after {
+        width: 100%;
+    }
+    
+    /* Enhanced Container Styles */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    
+    .hero-text {
+        max-width: 600px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        color: #007ced;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-text p {
+        color: #e5e5e5;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    /* Enhanced Project Section Styles */
+    section {
+        margin: 40px 0;
+    }
+    section:first-of-type {
+        margin-top: 20px;  /* Add this new rule */
+    }
+    h2 {
+        font-size: 2.5rem;
+        color: #007ced;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #007ced;
+    }
+    
+    .project {
+        background: #fff;
+        border: none;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+    
+    .project:hover {
+        transform: translateY(-5px);
+    }
+    
+    .project h3 {
+        color: #007ced;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .project p {
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.7;
+    }
+    
+    .project a {
+        color: #007ced;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .project a:hover {
+        color: #0056b3;
+    }
+    
+    /* Enhanced Responsive Design */
+    @media (max-width: 930px) {
+        nav .togglebtn {
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: 45px;
+            right: 3%;
+            z-index: 5;
+            cursor: pointer;
+        }
+    
+        nav .togglebtn span {
+            display: block;
+            background-color: #007ced;
+            margin: 6px 0;
+            width: 100%;
+            height: 3px;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+    
+        nav .navlinks {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background-color: #1a1a1a;
+            flex-direction: column;
+            padding: 120px 20px;
+            transition: 0.5s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        nav .navlinks.open {
+            right: 0;
+        }
+    
+        nav .navlinks li {
+            margin: 15px 0;
+        }
+    
+        .container {
+            padding: 4rem 0;
+        }
+    
+        .hero-text h1 {
+            font-size: 2.8rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-text h1 {
+            font-size: 2.3rem;
+        }
+    
+        section {
+            margin: 50px 0;
+        }
+    
+        h2 {
+            font-size: 2rem;
+        }
+    
+        .project {
+            padding: 20px;
+        }
+    }
+</style>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i></i>
+                    <span class="logo-text">My Projects</span>
+                </div>
+                <nav>
+                    <div class="togglebtn" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Projects Portfolio</h1>
+                    <p>Explore my projects, showcasing my skills in Python, data science, and machine learning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <section>
+            <h2>Featured Project</h2>
+            <div class="project">
+                <h3>ELISA Assistant</h3>
+                <p>
+                    ELISA is a Python-based assistant designed to control various activities on my laptop, such as taking screenshots and automating tasks.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/ELISA" target="_blank">ELISA Assistant Repository</a>
+                </p>
+                <p>
+                    <strong>LinkedIn Post:</strong> <a href="https://www.linkedin.com/posts/thiravidan_ai-machinelearning-python-activity-7225413098826842112-e58h?utm_source=share&utm_medium=member_android" target="_blank">View LinkedIn Post</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Science Projects</h2>
+            <div class="project">
+                <h3>Titanic Dataset Analysis</h3>
+                <p>
+                    A data science project analyzing the Titanic dataset using Python.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/Codsoft/blob/main/Task_1.ipynb" target="_blank">Titanic Dataset Repository</a>
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Movie Rating Prediction</h3>
+                <p>
+                    A machine learning project to predict movie ratings using Python.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/Codsoft/blob/main/Task_2.ipynb" target="_blank">Movie Rating Repository</a>
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Iris Flower Classification</h3>
+                <p>
+                    A classification project that predicts the species of iris flowers using machine learning.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/Codsoft/blob/main/Task_3.ipynb" target="_blank">Iris Classification Repository</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Other Machine Learning Projects</h2>
+            <div class="project">
+                <h3>Gender Classification</h3>
+                <p>
+                    A simple machine learning project to classify gender based on input features.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/PRODIGY_Trackcode_1" target="_blank">Gender Classification Repository</a>
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Logistic Regression, KNN, and Decision Tree</h3>
+                <p>
+                    A machine learning project implementing algorithms like Logistic Regression, KNN, and Decision Tree.
+                </p>
+                <p>
+                    <strong>GitHub Link:</strong> <a href="https://github.com/Thiravidan/PRODIGY_Trackcode_2/blob/main/pro2.ipynb" target="_blank">ML Algorithms Repository</a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.navlinks');
+            navLinks.classList.toggle('open');
+            document.querySelector('.togglebtn').classList.toggle('click');
+        }
+    </script>
+</body>
+</html>

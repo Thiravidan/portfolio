@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-t"></i>
+                    <div class="logo-text">THIRAVIDAN</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                       
+                        <li><a href="mailto:thiravidantamizhan@gmail.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi, I'm a <span class="input">Data Scientist</span></h5>
+                    <h1>THIRAVIDAN</h1>
+                    <p>
+                        I am a third-year student with a strong foundation in Python, Java, and SQL. I specialize in data analysis, machine learning, and data visualization. I have completed several projects, including an intelligent assistant, data science tasks, and more. Currently, I am pursuing data science internships to further enhance my skills.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" class="btn active" download="Resume_Thiravidan.pdf">Download CV</a>
+                        <a href="https://wa.me/9123563645" class="btn" target="_blank">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/thiravidan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/Thiravidan_2004/" target="_blank"><i class="fa-solid fa-code"></i></a>
+                        <a href="https://github.com/Thiravidan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Typed.js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["Data Analyst", "Data Scientist", "Machine Learning Enthusiast"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true,
+        });
+    </script>
+</body>
+</html>
